@@ -184,8 +184,7 @@ Proyek ini dibuat untuk keperluan akademik. Data bersumber dari NASA FIRMS yang 
 ---
 
 <div align="center">
-    <sub>Muhammad Hafiz</sub><br>
-    <sub>2311532007</sub><br>
+    <sub>Muhammad Hafiz - 2311532007</sub><br>
     <sub>Tugas Akhir Mata Kuliah Visualisasi Data Spasio-Temporal</sub><br>
     <sub>Universitas Andalas</sub>
 </div>
