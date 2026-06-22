@@ -1,0 +1,19 @@
+{
+  "order": [
+    1,
+    1,
+    1
+  ],
+  "seasonal_order": [
+    1,
+    1,
+    1,
+    12
+  ],
+  "mae": 268.41,
+  "rmse": 359.83,
+  "mape": 112.84,
+  "train_period": "2020-01 s/d 2025-12",
+  "forecast_period": "2026-07 s/d 2027-06",
+  "tanggal_training": "2026-06-21"
+}
