@@ -585,33 +585,15 @@ with tab3:
         """, unsafe_allow_html=True)
 
     with col_met:
-        metrics_html = ""
-        for k, v, desc in [
-            ("MAE",  f"{model_info['mae']:.2f}",   "Mean Absolute Error"),
-            ("RMSE", f"{model_info['rmse']:.2f}",  "Root Mean Squared Error"),
-            ("MAPE", f"{model_info['mape']:.2f}%", "Mean Absolute Percentage Error"),
-        ]:
-            metrics_html += f"""
-            <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;
-                        padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.05);">
-                <div style="width:54px;height:54px;border-radius:10px;background:rgba(224,123,57,0.1);
-                            display:flex;flex-direction:column;align-items:center;
-                            justify-content:center;flex-shrink:0;">
-                    <span style="font-size:10px;font-weight:800;color:#E07B39;text-transform:uppercase;">{k}</span>
-                </div>
-                <div>
-                    <p style="font-size:24px;font-weight:800;color:#fff;line-height:1;margin:0;">{v}</p>
-                    <p style="font-size:11px;color:#6B7280;margin:3px 0 0 0;">{desc}</p>
-                </div>
-            </div>"""
-
-        st.markdown(f"""
-        <div style="background:#1A1F2E;border:1px solid rgba(255,255,255,0.06);
-                    border-radius:14px;padding:20px;">
-            {label_upper("Metrik Evaluasi Model")}
-            {metrics_html}
-        </div>
-        """, unsafe_allow_html=True)
+        st.markdown("### Metrik Evaluasi Model")
+        
+        col_mae, col_rmse, col_mape = st.columns(3)
+        with col_mae:
+            st.metric("MAE", f"{model_info['mae']:.2f}")
+        with col_rmse:
+            st.metric("RMSE", f"{model_info['rmse']:.2f}")
+        with col_mape:
+            st.metric("MAPE", f"{model_info['mape']:.2f}%")
 
     st.markdown('<div style="height:16px;"></div>', unsafe_allow_html=True)
 
